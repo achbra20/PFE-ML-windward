@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>ML-WindWard</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../static/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../static/dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="../static/vendor/morrisjs/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="{{url_for('static', filename='jquery.js') }}">\x3C/script>')</script>
+        <script type=text/javascript>$SCRIPT_ROOT = {{ request.script_root|tojson|safe }};</script>
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Admin Machine learning Windword</a>
+            </div>
+            <!-- /.navbar-header -->
+
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="{{ '/logout' }}"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+
+            <!-- /.navbar-static-side -->
+        </nav>
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Dashboard</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-green">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i><img  id="ajax_loading_1" src="../static/image/Reload-150px.svg"  height="65px" alt="Loading" /></i>
+                                    <i id="refech_data_ml" class="fa fa-refresh fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">{{ creation_data_destination.strftime('%d/%m/%Y') }}</div>
+                                    <div>Last referech</div>
+                                </div>
+                            </div>
+                        </div>
+                        <script type=text/javascript>
+                                        $(function() {
+                                            $('a#update_data').bind('click', function() {
+                                                $.getJSON($SCRIPT_ROOT + '/update_data', {
+                                                }, function(data) {
+                                                $("#update").text(data.result);
+                                                $('#refech_data_ml').show();
+                                                $('#ajax_loading_1').hide();
+                                                });
+                                                return false;
+                                            });
+                                        });
+                        </script>
+                        <a href="#" id="update_data">
+                            <div class="panel-footer">
+                                <span class="pull-left">Refech Data of M-L</span>
+                                <span id="update" class="pull-right"></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i><img  id="ajax_gear" src="../static/image/Gear-150px.svg"  height="65px" alt="Loading" /></i>
+                                    <i id="gear_ml_des"class="fa fa-gears fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <span class="text-info"></span>
+                                    <div class="huge">{{ date_model_destination.strftime('%d/%m/%Y') }}</div>
+                                    <div>Last Training</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <script type=text/javascript>
+                                        $(function() {
+                                            $('a#start_ml').bind('click', function() {
+                                                $('#gear_ml_des').hide();
+                                                $.getJSON($SCRIPT_ROOT + '/new_training_model_destination', {
+                                                }, function(data) {
+                                                $("#result_ml").text(data.result);
+                                                $('#gear_ml_des').show();
+                                                $('#ajax_gear').hide();
+                                                });
+                                                return false;
+                                            });
+                                        });
+                                </script>
+                        <a  href="#" id=start_ml>
+                            <div class="panel-footer">
+                                <span class="pull-left">New training M-L Destination </span>
+                                <span id= result_ml class="pull-right"></span>
+                                <div  class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-green">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i><img  id="ajax_loading_data_boat" src="../static/image/Reload-150px.svg"  height="65px" alt="Loading" /></i>
+                                    <i id="refrech_data_boat" class="fa  fa-refresh fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">{{ creation_data_boat.strftime('%d/%m/%Y') }}</div>
+                                    <div>Last referech</div>
+                                </div>
+                            </div>
+                        </div>
+                            <script type=text/javascript>
+                                        $(function() {
+                                            $('a#update_data_boats').bind('click', function() {
+                                                $.getJSON($SCRIPT_ROOT + '/create_data_boats', {
+                                                }, function(data) {
+                                                $("#reslut_update_data_boats").text(data.result);
+                                                $('#refrech_data_boat').show();
+                                                $('#ajax_loading_data_boat').hide();
+                                                });
+                                                 return false;
+                                            });
+                                        });
+                             </script>
+                        <a href="#" id="update_data_boats">
+                            <div class="panel-footer">
+                                <span class="pull-left">Referech Data of M-l Boat </span>
+                                <span class="pull-right" id="reslut_update_data_boats" ></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i><img  id="ajax_gear_boat" src="../static/image/Gear-150px.svg"  height="65px" alt="Loading" /></i>
+                                    <i id="gear_ml_boat"class="fa fa-gears fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">{{ creation_model_boat.strftime('%d/%m/%Y') }}</div>
+                                    <div>Last Training</div>
+                                </div>
+                            </div>
+                        </div>
+                        <script type=text/javascript>
+                                        $(function() {
+                                            $('a#training_ml_boat').bind('click', function() {
+                                                $('#gear_ml_boat').hide();
+                                                $.getJSON($SCRIPT_ROOT + '/training_data_boats', {
+                                                }, function(data) {
+                                                $("#result_ml_boat").text(data.result);
+                                                $('#gear_ml_boat').show();
+                                                $('#ajax_gear_boat').hide();
+                                                });
+                                                return false;
+                                            });
+                                        });
+                                </script>
+                        <a  href="#" id="training_ml_boat">
+                            <div class="panel-footer">
+                                <span class="pull-left">New training M-L Boat </span>
+                                <span id= "result_ml_boat" class="pull-right"></span>
+                                <div  class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-green">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i><img  id="ajax_loading_sr_b_d" src="../static/image/Reload-150px.svg"  height="65px" alt="Loading" /></i>
+                                    <i id="refrech_rec_b_d" class="fa  fa-refresh fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">{{ date_creation_boast_des.strftime('%d/%m/%Y') }}</div>
+                                    <div>Last referech</div>
+                                </div>
+                            </div>
+                        </div>
+                             <script type=text/javascript>
+                                        $(function() {
+                                            $('a#update_recommendation_boats_des').bind('click', function() {
+                                                $.getJSON($SCRIPT_ROOT + '/create_data_boats_destination', {
+                                                }, function(data) {
+                                                $("#update_rec_b_d").text(data.result);
+                                                $('#refrech_rec_b_d').show();
+                                                $('#ajax_loading_sr_b_d').hide();
+                                                });
+                                                 return false;
+                                            });
+                                        });
+                             </script>
+                        <a href="#" id="update_recommendation_boats_des">
+                            <div class="panel-footer">
+                                <span class="pull-left">Referech Data of M-L Boat-Destination </span>
+                                <span class="pull-right" id="update_rec_b_d" ></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i><img  id="ajax_gear_b_d" src="../static/image/Gear-150px.svg"  height="65px" alt="Loading" /></i>
+                                    <i id="gear_ml_b_d"class="fa fa-gears fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">{{ date_model_boat_des.strftime('%d/%m/%Y') }}</div>
+                                    <div>Last Training</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <script type=text/javascript>
+                                        $(function() {
+                                            $('a#training_boat_destination').bind('click', function() {
+                                                $('#gear_ml_b_d').hide();
+                                                $.getJSON($SCRIPT_ROOT + '/training_model_boats_destination', {
+                                                }, function(data) {
+                                                $("#result_ml_b_d").text(data.result);
+                                                $('#gear_ml_b_d').show();
+                                                $('#ajax_gear_b_d').hide();
+                                                });
+                                                return false;
+                                            });
+
+                                        });
+                                </script>
+                        <a  href="#" id="training_boat_destination" >
+                            <div class="panel-footer">
+                                <span class="pull-left">New training M-L Boat-Destination </span>
+                                <span id= result_ml_b_d class="pull-right"></span>
+                                <div  class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-yellow" >
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i><img  id="ajax_loading" src="../static/image/Reload-150px.svg"  height="65px" alt="Loading" /></i>
+                                    <i id="refrech_rec_D" class="fa  fa-refresh fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">{{ creation_rec_destination.strftime('%d/%m/%Y') }}</div>
+                                    <div>Last referech</div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                           <script type=text/javascript>
+                                        $(function() {
+                                            $('a#update_recommendation').bind('click', function() {
+                                                $.getJSON($SCRIPT_ROOT + '/create_data_recommendation', {
+                                                }, function(data) {
+                                                $("#update_rec_res").text(data.result);
+                                                $('#refrech_rec_D').show();
+                                                $('#ajax_loading').hide();
+                                                });
+                                                 return false;
+                                            });
+
+                                        });
+                                </script>
+                        <a href="#" id="update_recommendation">
+                            <div class="panel-footer">
+                                <span class="pull-left">Referech Data of S-R </span>
+                                <span class="pull-right" id="update_rec_res"></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-yellow" >
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i><img  id="ajax_loading_srb" src="../static/image/Reload-150px.svg"  height="65px" alt="Loading" /></i>
+                                    <i id="refrech_rec_b" class="fa  fa-refresh fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">{{ creation_rec_boats.strftime('%d/%m/%Y') }}</div>
+                                    <div>Last referech</div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                           <script type=text/javascript>
+                                        $(function() {
+                                            $('a#update_recommendation_b').bind('click', function() {
+                                                $.getJSON($SCRIPT_ROOT + '/create_data_recommendation_boats', {
+                                                }, function(data) {
+                                                $("#update_rec_b").text(data.result);
+                                                $('#refrech_rec_b').show();
+                                                $('#ajax_loading_srb').hide();
+                                                });
+                                                 return false;
+                                            });
+                                        });
+                                </script>
+                        <a href="#" id="update_recommendation_b">
+                            <div class="panel-footer">
+                                <span class="pull-left">Referech Data of S-R-B </span>
+                                <span class="pull-right" id="update_rec_b"></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-8">
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-bar-chart-o fa-fw"></i>  Chart Destination
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="form-group">
+                                            <label>Destination</label>
+                                            <select id="destination"  class="form-control">
+                                               {% for destination in all_destination %}
+                                                    <option  value="{{ destination.id }}" >{{ destination.destination }}</option>
+                                               {% endfor %}
+                                            </select>
+                            </div>
+                            <div id ="morris-bar-chart2"></div>
+                            <div class="text-center" id ="landing_1" ><img  src="../static/image/Blocks-150px.svg"  height="150px" alt="Loading" /></div>
+                          </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-bar-chart-o fa-fw"></i>  Chart Boat
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="form-group">
+                                            <label>Boat</label>
+                                            <select id="boats"  class="form-control">
+                                               {% for boat in all_boats %}
+                                                    <option  value="{{ boat.id_gen }}" >{{ boat.name }}</option>
+                                               {% endfor %}
+                                            </select>
+                            </div>
+                            <div id ="morris-bar-chart-boat"></div>
+                            <div class="text-center" id ="landing_boat" ><img  src="../static/image/Blocks-150px.svg"  height="150px" alt="Loading" /></div>
+                          </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-bar-chart-o fa-fw"></i>  Chart Boat Destination
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <div class="col-lg-6">
+                                    <label>Boat</label>
+                                    <select id="boats_des"  class="form-control">
+                                        {% for boat in all_boats_des %}
+                                            <option  value="{{ boat.id_gen }}" >{{ boat.name }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                                <div class="col-lg-6">
+                                    <label >Destination</label>
+                                    <select id="des_boats"  class="form-control">
+                                        {% for des in all_des_boats  %}
+                                            <option  value="{{ des.id }}" >{{ des.location_name }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-footer">
+                            <div class="text-center" id ="landing_boat_destination" ><img  src="../static/image/Blocks-150px.svg"  height="150px" alt="Loading" /></div>
+                            <div id ="morris-bar-chart-boat-destination"></div>
+                         </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-bar-chart-o fa-fw"></i>  Chart  Destination-boat
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="form-group">
+                                            <label>Destination</label>
+                                            <select id="destination_boats"  class="form-control">
+                                               {% for destination in all_destination %}
+                                                    <option  value="{{ destination.id }}" >{{ destination.destination }}</option>
+                                               {% endfor %}
+                                            </select>
+                            </div>
+                            <div id ="morris-bar-chart_destination_boats"></div>
+                            <div class="text-center" id ="landing_destination_boats" ><img  src="../static/image/Blocks-150px.svg"  height="150px" alt="Loading" /></div>
+                          </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-bar-chart-o fa-fw"></i> Top 10
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                           <table class="table" id="dataTables-example">
+                                <thead>
+                                    <tr>
+                                        <th>Name Destination</th>
+                                        <th>Score</th>
+                                      </tr>
+                                </thead>
+                                <tbody>
+                                {% for destination in all_destination_score %}
+                                    <tr>
+                                        <td>{{ destination.location_name }}</td>
+                                        <td>{{ destination.score }}</td>
+                                     </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                            <!-- /.table-responsive -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                     <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-bar-chart-o fa-fw"></i> All Boats request
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                           <table class="table" id="dataTables-boats">
+                                <thead>
+                                    <tr>
+                                        <th>Boats</th>
+                                        <th>Score</th>
+                                      </tr>
+                                </thead>
+                                <tbody>
+                                           {% for boat in boats_score %}
+                                                <tr>
+                                                        <td>{{ boat.name }}</td>
+                                                        <td>{{ boat.score }}</td>
+                                                </tr>
+                                           {% endfor %}
+                                </tbody>
+                            </table>
+                            <!-- /.table-responsive -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+
+                </div>
+                <!-- /.col-lg-8 -->
+
+                <div class="col-lg-4">
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-bar-chart fa-fw"></i> Top 5 Destination
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Destination</th>
+                                                    <th>Number request</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                            {% for i in range(5)  %}
+                                                <tr>
+                                                        <td>{{ all_destination_score[i].location_name }}</td>
+                                                        <td>{{ all_destination_score[i].score }} </td>
+                                                </tr>
+                                            {% endfor %}
+                                            </tbody>
+                                        </table>
+
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-bar-chart fa-fw"></i> Top 5 Boats
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Boats</th>
+                                                    <th>Number request</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                            {% for i in range(5)  %}
+                                                <tr>
+                                                        <td>{{ boats_score[i].name }}</td>
+                                                        <td>{{ boats_score[i].score }} </td>
+                                                </tr>
+                                            {% endfor %}
+                                            </tbody>
+                                        </table>
+
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-bar-chart-o fa-fw">  </i>Boat type
+                        </div>
+                        <div class="panel-body">
+                              <div class="form-group">
+                                   <label>Country</label>
+                                   <select id="country"  class="form-control">
+                                       {% for country in countrys %}
+                                             <option  value="{{ country.0 }}" >{{ country.1 }}</option>
+                                       {% endfor %}
+                                   </select>
+                                </div>
+                            <div id="morris-donut-chart"></div>
+                            <div class="text-center" id ="landing_2" ><img  src="../static/image/Blocks-150px.svg"  height="150px" alt="Loading" /></div>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-bar-chart-o fa-fw">  </i>Boat type for destination
+                        </div>
+                        <div class="panel-body">
+                              <div class="form-group">
+                                            <label>Destination</label>
+                                            <select id="destination_boat_type"  class="form-control">
+                                               {% for destination in all_destination %}
+                                                    <option  value="{{ destination.id }}" >{{ destination.destination }}</option>
+                                               {% endfor %}
+                                            </select>
+                                </div>
+                            <div id="morris-donut-chart-destination_boat_type"></div>
+                            <div class="text-center" id ="landing_destination_boat_type" ><img  src="../static/image/Blocks-150px.svg"  height="150px" alt="Loading" /></div>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel .chat-panel -->
+
+                </div>
+                <!-- /.col-lg-4 -->
+
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="../static/vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../static/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../static/vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="../static/vendor/raphael/raphael.min.js"></script>
+    <script src="../static/vendor/morrisjs/morris.min.js"></script>
+    <script src="../static/data/morris.data.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="../static/JavaScript_test.js?v=9"></script>
+
+    <!-- DataTables JavaScript -->
+    <script src="../static/vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="../static/vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
+    <script src="../static/vendor/datatables-responsive/dataTables.responsive.js"></script>
+
+    <script>
+    $(document).ready(function() {
+        $('#dataTables-example').DataTable({
+            responsive: true
+
+        });
+        $('#dataTables-boats').DataTable({
+            responsive: true
+
+        });
+    });
+    </script>
+
+</body>
+
+</html>
