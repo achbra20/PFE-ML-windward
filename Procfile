@@ -1,1 +1,1 @@
-web: gunicorn Machine_learning:app --log-file=-
+web: gunicorn app:Machine_learning --log-file=-
