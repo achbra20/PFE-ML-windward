@@ -127,7 +127,6 @@ scikit-learn==0.19.1
 scipy==0.19.1
 unicodecsv==0.14.1
 urllib3==1.22
-vboxapi==1.0
 virtualenv==15.1.0
 virtualenv-clone==0.3.0
 
