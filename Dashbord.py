@@ -8,7 +8,6 @@ from country_list import countries_for_language
 import base64
 import os
 import io
-import matplotlib.pyplot as plt
 
 class Statestique_all_destination:
 
