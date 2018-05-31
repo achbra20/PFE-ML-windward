@@ -46,13 +46,13 @@ def login():
             return redirect(url_for('index'))
         else:
             response= "Invalid connexion"
-    return render_template('login.html', response = response)
+    return render_template('Login.html', response = response)
 
 @app.route('/logout')
 def logout():
     session.pop('logged_in', None)
     flash('You were logged out.')
-    return render_template('login.html')
+    return render_template('Login.html')
 
 @app.route('/index')
 def index():
