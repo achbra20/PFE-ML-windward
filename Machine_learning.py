@@ -309,7 +309,7 @@ def begin_all():
 
 if __name__ == '__main__':
     app.secret_key = os.urandom(12)
-    app.run(host = '40.89.130.89',port=5000,threaded=True)
+    app.run(threaded=True)
 
 
 
