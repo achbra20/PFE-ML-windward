@@ -216,7 +216,7 @@ class Recommendation_boats:
     def index_country(self,root_model):
         boats_data = Etl_data.open_json("recommandation_boats",root_model)
         boats_data = boats_data[boats_data["country"] != ""]
-        index_country = Etl_data.open_json("indexed_country",root_model)
+        index_country = Etl_data.open_json("indexed_countryt",root_model)
         unique_country = list(boats_data.country.unique())
         for i in range(0, len(unique_country)):
             one_index = index_country[index_country["label"] == unique_country[i]]
