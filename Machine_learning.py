@@ -139,6 +139,12 @@ def build_graphe_country_boat(country):
     botas = statistique.statestique_type_boat(api_ww,api_crm,country)
     return jsonify(botas)
 
+@app.route('/boat_country/<country>')
+def build_graphe_country_boat_name(country):
+    path        = app.config['ROOT_MODEL']
+    botas       = Statestique_bosts.country_boat_statistique(path,country)
+    return jsonify(botas)
+
 
 #################### Recommendation destination#######################
 
@@ -311,7 +317,7 @@ def begin_all():
 if __name__ == '__main__':
     
     app.config['SESSION_TYPE'] = 'filesystem'
-    app.run(threaded=True)
+    app.run(threaded=True, debug= True)
 
 
 

@@ -116,7 +116,6 @@ class Statestique_bosts:
         boats_crm = self.boats_clean_type(req_crm,"type_bateau","pays",["3","1","2"])
         boats     = self.boats_clean_type(req_ww, "boat_type", "country", ["Motoryacht", "Monohull", "Catamaran"])
         boats     =  self.somme_boats(boats,boats_crm)
-        print(boats)
         return boats
 
     #todo add the count of crm and ww
@@ -282,6 +281,19 @@ class Statestique_bosts:
             df_final.append({"id_gen":boat["id_gen"],"name_boat":boat["boat_brand"] + " " + boat["boat_model"] + " " + boat["shipyard_name"],"score":boat["score"]})
 
         return df_final
+
+    @staticmethod
+    def country_boat_statistique(root_model,code_country):
+        df_boats = Etl_data.open_json("recommandation_boats", root_model)
+        df_boats = df_boats[df_boats["country"] == code_country]
+        boat = list(df_boats.id_gen.unique())
+        df_score = []
+        for i in range(0,len(boat)):
+            score    = 0
+            one_boat = pd.DataFrame(df_boats[df_boats["id_generic"] == boat[i]])
+            score    = len(one_boat)
+            df_score.append({"id_gen":boat[i],"score":score,'name':one_boat["name"]})
+        return df_score
 
 
 

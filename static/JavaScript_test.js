@@ -105,6 +105,41 @@ $(function() {
          return data;
 
     })
+
+    $('#country_boat').change(function() {
+         var country = $(this).val();
+         var data = "";
+         $('#morris-bar-chart-country_boat').empty().append();
+         $('#landing_country_boat').show();
+         $.ajax({
+            type: 'GET',
+            url:   '/boat_country/'+country,
+            dataType: 'json',
+            async: true,
+            contentType: "application/json; charset=utf-8",
+            data: {},
+            success: function (result) {
+                 result.score = parseInt(result.score);
+                 result.dates = new Date(result.dates);
+                 $('#landing_country_boat').hide();
+                 Morris.Bar({
+                    element: 'morris-bar-chart-country_boat',
+                    data: result,
+                    xkey: 'name',
+                    ykeys: ['score'],
+                    labels: ['score','name'],
+                    hideHover: 'auto',
+                    resize: true,
+                    });
+                 $('#landing_country_boat').hide();
+            },
+            error: function (xhr, status, error) {
+                alert(error);
+                $('#landing_country_boat').hide();
+            }
+        });
+         return data;
+    })
 });
 $(function() {
 
@@ -180,7 +215,10 @@ $(function() {
          return data;
 
     })
+
+
 });
+
 jQuery(function($){
 
     $('#landing_1').hide();
@@ -189,6 +227,7 @@ jQuery(function($){
     $('#landing_boat_destination').hide();
     $('#landing_destination_boat_type').hide();
     $('#landing_destination_boats').hide();
+    $('#landing_country_boat').hide();
 
 
     $('#ajax_loading').hide();
@@ -241,6 +280,7 @@ jQuery(function($){
     });
 
 });
+
 $(function() {
     $('#country').change(function(){
          var id = $(this).val();

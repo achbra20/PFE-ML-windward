@@ -18,9 +18,6 @@ import random
 import implicit
 
 
-from sklearn.svm import SVR
-
-
 class Etl_Model_Ml_Destination:
 
     #todo separation in request how have many destinatination

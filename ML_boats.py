@@ -76,6 +76,7 @@ class Create_Data_Recommendation_Boats:
     def created_data_for_recommendation_boat(self,root_model):
         print("log refrech data start")
         boats_data = self.boat_found_all_id()
+        boats_data = boats_data[boats_data["country"] != ""]
         boats_data_final = self.ranked_boat(boats_data)
         Etl_data.writeToJSONFile(root_model,"recommandation_boats",boats_data_final.to_dict("records"))
         recommendation = Recommendation_boats(root_model)
@@ -215,7 +216,6 @@ class Recommendation_boats:
 
     def index_country(self,root_model):
         boats_data = Etl_data.open_json("recommandation_boats",root_model)
-        boats_data = boats_data[boats_data["country"] != ""]
         index_country = Etl_data.open_json("indexed_countryt",root_model)
         unique_country = list(boats_data.country.unique())
         for i in range(0, len(unique_country)):
