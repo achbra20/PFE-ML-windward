@@ -286,7 +286,7 @@ class Statestique_bosts:
     def country_boat_statistique(root_model,code_country):
         df_boats = Etl_data.open_json("recommandation_boats", root_model)
         df_boats = df_boats[df_boats["country"] == code_country]
-        boat = list(df_boats.id_gen.unique())
+        boat = list(df_boats.id_generic.unique())
         df_score = []
         for i in range(0,len(boat)):
             score    = 0
