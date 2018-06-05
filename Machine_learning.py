@@ -145,6 +145,11 @@ def build_graphe_country_boat_name(country):
     botas       = Statestique_bosts.country_boat_statistique(path,country)
     return jsonify(botas)
 
+@app.route('/graphe_destination_country/<country>/<destination>')
+def build_graphe_country_destination_name(country,destination):
+    path        = app.config['ROOT_MODEL']
+    list_destination       = Statestique_bosts.country_destinaion_statistique(path,country,destination)
+    return jsonify(list_destination)
 
 #################### Recommendation destination#######################
 
