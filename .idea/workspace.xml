@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3c26ffef-7e7d-4801-a11a-1d285f476a87" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Dashbord.py" afterPath="$PROJECT_DIR$/Dashbord.py" />
-      <change beforePath="$PROJECT_DIR$/Machine_learning.py" afterPath="$PROJECT_DIR$/Machine_learning.py" />
-      <change beforePath="$PROJECT_DIR$/myconfig.cfg" afterPath="$PROJECT_DIR$/myconfig.cfg" />
       <change beforePath="$PROJECT_DIR$/static/JavaScript_test.js" afterPath="$PROJECT_DIR$/static/JavaScript_test.js" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -85,11 +81,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JavaScript_test.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="JavaScript_test.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/JavaScript_test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="71">
-              <caret line="206" column="51" lean-forward="false" selection-start-line="206" selection-start-column="51" selection-end-line="206" selection-end-column="51" />
+            <state relative-caret-position="279">
+              <caret line="406" column="38" lean-forward="false" selection-start-line="406" selection-start-column="38" selection-end-line="406" selection-end-column="38" />
               <folding>
                 <element signature="e#55#1081#0" expanded="false" />
                 <element signature="e#1130#2198#0" expanded="false" />
@@ -101,12 +97,12 @@
                 <element signature="e#7836#10469#0" expanded="false" />
                 <element signature="e#7877#9149#0" expanded="false" />
                 <element signature="e#9190#10464#0" expanded="false" />
+                <element signature="e#10485#13219#0" expanded="false" />
                 <element signature="e#10536#11850#0" expanded="false" />
                 <element signature="e#11893#13214#0" expanded="false" />
-                <element signature="e#13240#15456#0" expanded="false" />
-                <element signature="e#15472#17367#0" expanded="false" />
-                <element signature="e#15509#16358#0" expanded="false" />
-                <element signature="e#16431#17364#0" expanded="false" />
+                <element signature="e#15521#17416#0" expanded="false" />
+                <element signature="e#15558#16407#0" expanded="false" />
+                <element signature="e#16480#17413#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -150,7 +146,7 @@
         <entry file="file://$PROJECT_DIR$/myconfig.cfg">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
-              <caret line="17" column="33" lean-forward="false" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+              <caret line="17" column="48" lean-forward="false" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -198,7 +194,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Dashbord.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Dashbord.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Dashbord.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="215">
@@ -250,11 +246,11 @@
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/Ml_destination.py" />
         <option value="$PROJECT_DIR$/ML_boats.py" />
-        <option value="$PROJECT_DIR$/myconfig.cfg" />
         <option value="$PROJECT_DIR$/Machine_learning.py" />
         <option value="$PROJECT_DIR$/templates/index.html" />
-        <option value="$PROJECT_DIR$/static/JavaScript_test.js" />
         <option value="$PROJECT_DIR$/Dashbord.py" />
+        <option value="$PROJECT_DIR$/myconfig.cfg" />
+        <option value="$PROJECT_DIR$/static/JavaScript_test.js" />
       </list>
     </option>
   </component>
@@ -387,14 +383,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5060514" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32843137" sideWeight="0.49394855" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38398692" sideWeight="0.4969743" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.49394855" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38398692" sideWeight="0.4969743" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25869894" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -675,14 +670,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/myconfig.cfg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="17" column="33" lean-forward="false" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/file_model/data_Ml_destination.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -794,31 +781,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/JavaScript_test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="71">
-          <caret line="206" column="51" lean-forward="false" selection-start-line="206" selection-start-column="51" selection-end-line="206" selection-end-column="51" />
-          <folding>
-            <element signature="e#55#1081#0" expanded="false" />
-            <element signature="e#1130#2198#0" expanded="false" />
-            <element signature="e#2235#3325#0" expanded="false" />
-            <element signature="e#3369#4453#0" expanded="false" />
-            <element signature="e#4497#5584#0" expanded="false" />
-            <element signature="e#5622#6608#0" expanded="false" />
-            <element signature="e#6662#7816#0" expanded="false" />
-            <element signature="e#7836#10469#0" expanded="false" />
-            <element signature="e#7877#9149#0" expanded="false" />
-            <element signature="e#9190#10464#0" expanded="false" />
-            <element signature="e#10536#11850#0" expanded="false" />
-            <element signature="e#11893#13214#0" expanded="false" />
-            <element signature="e#13240#15456#0" expanded="false" />
-            <element signature="e#15472#17367#0" expanded="false" />
-            <element signature="e#15509#16358#0" expanded="false" />
-            <element signature="e#16431#17364#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Ml_destination.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-222">
@@ -919,6 +881,39 @@
             <element signature="e#16070#16711#0" expanded="false" />
             <element signature="e#16795#17352#0" expanded="false" />
             <element signature="e#17416#17726#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myconfig.cfg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="17" column="48" lean-forward="false" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/JavaScript_test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="406" column="38" lean-forward="false" selection-start-line="406" selection-start-column="38" selection-end-line="406" selection-end-column="38" />
+          <folding>
+            <element signature="e#55#1081#0" expanded="false" />
+            <element signature="e#1130#2198#0" expanded="false" />
+            <element signature="e#2235#3325#0" expanded="false" />
+            <element signature="e#3369#4453#0" expanded="false" />
+            <element signature="e#4497#5584#0" expanded="false" />
+            <element signature="e#5622#6608#0" expanded="false" />
+            <element signature="e#6662#7816#0" expanded="false" />
+            <element signature="e#7836#10469#0" expanded="false" />
+            <element signature="e#7877#9149#0" expanded="false" />
+            <element signature="e#9190#10464#0" expanded="false" />
+            <element signature="e#10485#13219#0" expanded="false" />
+            <element signature="e#10536#11850#0" expanded="false" />
+            <element signature="e#11893#13214#0" expanded="false" />
+            <element signature="e#15521#17416#0" expanded="false" />
+            <element signature="e#15558#16407#0" expanded="false" />
+            <element signature="e#16480#17413#0" expanded="false" />
           </folding>
         </state>
       </provider>

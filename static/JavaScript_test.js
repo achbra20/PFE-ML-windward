@@ -404,6 +404,7 @@ jQuery(function($){
     $('#landing_country_destination').hide();
     $('#landing_year').hide();
     $('#landing_all_year').hide();
+    $('#landing_country_alldestination').hide();
 
 
     $('#ajax_loading').hide();
