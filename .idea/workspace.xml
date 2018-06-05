@@ -4,7 +4,6 @@
     <list default="true" id="3c26ffef-7e7d-4801-a11a-1d285f476a87" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/Dashbord.py" afterPath="$PROJECT_DIR$/Dashbord.py" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,16 +20,14 @@
       <file leaf-file-name="Machine_learning.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Machine_learning.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="141" column="25" lean-forward="false" selection-start-line="141" selection-start-column="13" selection-end-line="141" selection-end-column="25" />
+            <state relative-caret-position="170">
+              <caret line="129" column="58" lean-forward="false" selection-start-line="129" selection-start-column="58" selection-end-line="129" selection-end-column="58" />
               <folding>
                 <element signature="e#2031#5123#0" expanded="false" />
                 <element signature="e#5204#5416#0" expanded="false" />
                 <element signature="e#5489#5678#0" expanded="false" />
                 <element signature="e#5785#5998#0" expanded="false" />
                 <element signature="e#6099#6359#0" expanded="false" />
-                <element signature="e#6466#6700#0" expanded="false" />
-                <element signature="e#6789#7043#0" expanded="false" />
                 <element signature="e#7396#7937#0" expanded="false" />
                 <element signature="e#8023#8350#0" expanded="false" />
                 <element signature="e#8427#8995#0" expanded="false" />
@@ -43,6 +40,37 @@
                 <element signature="e#13130#13487#0" expanded="false" />
                 <element signature="e#13631#14276#0" expanded="false" />
                 <element signature="e#14366#14468#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ML_boats.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ML_boats.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="357" column="22" lean-forward="true" selection-start-line="357" selection-start-column="22" selection-end-line="357" selection-end-column="41" />
+              <folding>
+                <element signature="e#417#960#0" expanded="false" />
+                <element signature="e#1076#1282#0" expanded="false" />
+                <element signature="e#1325#2085#0" expanded="false" />
+                <element signature="e#2155#2686#0" expanded="false" />
+                <element signature="e#2732#3416#0" expanded="false" />
+                <element signature="e#3489#3888#0" expanded="false" />
+                <element signature="e#3915#7049#0" expanded="false" />
+                <element signature="e#7077#8664#0" expanded="false" />
+                <element signature="e#8695#9158#0" expanded="false" />
+                <element signature="e#9703#10104#0" expanded="false" />
+                <element signature="e#10154#10695#0" expanded="false" />
+                <element signature="e#10728#11911#0" expanded="false" />
+                <element signature="e#11962#12649#0" expanded="false" />
+                <element signature="e#12690#13000#0" expanded="false" />
+                <element signature="e#13056#13361#0" expanded="false" />
+                <element signature="e#13421#14378#0" expanded="false" />
+                <element signature="e#14466#15220#0" expanded="false" />
+                <element signature="e#15268#15883#0" expanded="false" />
+                <element signature="e#15963#16575#0" expanded="false" />
+                <element signature="e#17587#17931#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -102,8 +130,8 @@
       <file leaf-file-name="Dashbord.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Dashbord.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="288" column="39" lean-forward="false" selection-start-line="288" selection-start-column="39" selection-end-line="288" selection-end-column="39" />
+            <state relative-caret-position="239">
+              <caret line="296" column="23" lean-forward="false" selection-start-line="296" selection-start-column="23" selection-end-line="296" selection-end-column="23" />
               <folding>
                 <element signature="e#0#75#0" expanded="true" />
                 <element signature="e#318#415#0" expanded="false" />
@@ -287,7 +315,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.49394855" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09477124" sideWeight="0.4969743" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38398692" sideWeight="0.4969743" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25869894" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -601,67 +629,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ML_boats.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-244">
-          <caret line="218" column="0" lean-forward="false" selection-start-line="218" selection-start-column="0" selection-end-line="218" selection-end-column="0" />
-          <folding>
-            <element signature="e#417#960#0" expanded="false" />
-            <element signature="e#1076#1282#0" expanded="false" />
-            <element signature="e#1325#2085#0" expanded="false" />
-            <element signature="e#2155#2686#0" expanded="false" />
-            <element signature="e#2732#3416#0" expanded="false" />
-            <element signature="e#3489#3888#0" expanded="false" />
-            <element signature="e#3915#7049#0" expanded="false" />
-            <element signature="e#7077#8664#0" expanded="false" />
-            <element signature="e#8695#9158#0" expanded="false" />
-            <element signature="e#9703#10104#0" expanded="false" />
-            <element signature="e#10728#11911#0" expanded="false" />
-            <element signature="e#11962#12649#0" expanded="false" />
-            <element signature="e#12690#13000#0" expanded="false" />
-            <element signature="e#13056#13361#0" expanded="false" />
-            <element signature="e#13421#14378#0" expanded="false" />
-            <element signature="e#14466#15220#0" expanded="false" />
-            <element signature="e#15268#15883#0" expanded="false" />
-            <element signature="e#15963#16575#0" expanded="false" />
-            <element signature="e#17587#17931#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/test.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Machine_learning.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="141" column="25" lean-forward="false" selection-start-line="141" selection-start-column="13" selection-end-line="141" selection-end-column="25" />
-          <folding>
-            <element signature="e#2031#5123#0" expanded="false" />
-            <element signature="e#5204#5416#0" expanded="false" />
-            <element signature="e#5489#5678#0" expanded="false" />
-            <element signature="e#5785#5998#0" expanded="false" />
-            <element signature="e#6099#6359#0" expanded="false" />
-            <element signature="e#6466#6700#0" expanded="false" />
-            <element signature="e#6789#7043#0" expanded="false" />
-            <element signature="e#7396#7937#0" expanded="false" />
-            <element signature="e#8023#8350#0" expanded="false" />
-            <element signature="e#8427#8995#0" expanded="false" />
-            <element signature="e#9100#9624#0" expanded="false" />
-            <element signature="e#9789#10397#0" expanded="false" />
-            <element signature="e#10512#10975#0" expanded="false" />
-            <element signature="e#11038#11654#0" expanded="false" />
-            <element signature="e#11722#12057#0" expanded="false" />
-            <element signature="e#12231#13036#0" expanded="false" />
-            <element signature="e#13130#13487#0" expanded="false" />
-            <element signature="e#13631#14276#0" expanded="false" />
-            <element signature="e#14366#14468#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -680,6 +652,32 @@
             <element signature="e#9354#11249#0" expanded="false" />
             <element signature="e#9391#10240#0" expanded="false" />
             <element signature="e#10313#11246#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Machine_learning.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="129" column="58" lean-forward="false" selection-start-line="129" selection-start-column="58" selection-end-line="129" selection-end-column="58" />
+          <folding>
+            <element signature="e#2031#5123#0" expanded="false" />
+            <element signature="e#5204#5416#0" expanded="false" />
+            <element signature="e#5489#5678#0" expanded="false" />
+            <element signature="e#5785#5998#0" expanded="false" />
+            <element signature="e#6099#6359#0" expanded="false" />
+            <element signature="e#7396#7937#0" expanded="false" />
+            <element signature="e#8023#8350#0" expanded="false" />
+            <element signature="e#8427#8995#0" expanded="false" />
+            <element signature="e#9100#9624#0" expanded="false" />
+            <element signature="e#9789#10397#0" expanded="false" />
+            <element signature="e#10512#10975#0" expanded="false" />
+            <element signature="e#11038#11654#0" expanded="false" />
+            <element signature="e#11722#12057#0" expanded="false" />
+            <element signature="e#12231#13036#0" expanded="false" />
+            <element signature="e#13130#13487#0" expanded="false" />
+            <element signature="e#13631#14276#0" expanded="false" />
+            <element signature="e#14366#14468#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -712,10 +710,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ML_boats.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="357" column="22" lean-forward="true" selection-start-line="357" selection-start-column="22" selection-end-line="357" selection-end-column="41" />
+          <folding>
+            <element signature="e#417#960#0" expanded="false" />
+            <element signature="e#1076#1282#0" expanded="false" />
+            <element signature="e#1325#2085#0" expanded="false" />
+            <element signature="e#2155#2686#0" expanded="false" />
+            <element signature="e#2732#3416#0" expanded="false" />
+            <element signature="e#3489#3888#0" expanded="false" />
+            <element signature="e#3915#7049#0" expanded="false" />
+            <element signature="e#7077#8664#0" expanded="false" />
+            <element signature="e#8695#9158#0" expanded="false" />
+            <element signature="e#9703#10104#0" expanded="false" />
+            <element signature="e#10154#10695#0" expanded="false" />
+            <element signature="e#10728#11911#0" expanded="false" />
+            <element signature="e#11962#12649#0" expanded="false" />
+            <element signature="e#12690#13000#0" expanded="false" />
+            <element signature="e#13056#13361#0" expanded="false" />
+            <element signature="e#13421#14378#0" expanded="false" />
+            <element signature="e#14466#15220#0" expanded="false" />
+            <element signature="e#15268#15883#0" expanded="false" />
+            <element signature="e#15963#16575#0" expanded="false" />
+            <element signature="e#17587#17931#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Dashbord.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="288" column="39" lean-forward="false" selection-start-line="288" selection-start-column="39" selection-end-line="288" selection-end-column="39" />
+        <state relative-caret-position="239">
+          <caret line="296" column="23" lean-forward="false" selection-start-line="296" selection-start-column="23" selection-end-line="296" selection-end-column="23" />
           <folding>
             <element signature="e#0#75#0" expanded="true" />
             <element signature="e#318#415#0" expanded="false" />

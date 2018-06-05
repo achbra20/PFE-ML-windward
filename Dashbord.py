@@ -293,7 +293,8 @@ class Statestique_bosts:
             one_boat = pd.DataFrame(df_boats[df_boats["id_generic"] == boat[i]])
             score    = len(one_boat)
             df_score.append({"id_gen":boat[i],"score":score,'name':one_boat["name"]})
-        return df_score
+        df_final = pd.DataFrame(df_score)
+        return df_final.to_dict('records')
 
 
 
