@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3c26ffef-7e7d-4801-a11a-1d285f476a87" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/myconfig.cfg" afterPath="$PROJECT_DIR$/myconfig.cfg" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Machine_learning.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Machine_learning.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Machine_learning.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="146" column="52" lean-forward="true" selection-start-line="146" selection-start-column="52" selection-end-line="146" selection-end-column="52" />
+            <state relative-caret-position="207">
+              <caret line="343" column="13" lean-forward="true" selection-start-line="343" selection-start-column="13" selection-end-line="343" selection-end-column="13" />
               <folding>
                 <element signature="e#0#58#0" expanded="true" />
                 <element signature="e#2048#5222#0" expanded="false" />
@@ -45,64 +44,6 @@
                 <element signature="e#14321#14678#0" expanded="false" />
                 <element signature="e#14822#15467#0" expanded="false" />
                 <element signature="e#15557#15659#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ML_boats.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ML_boats.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="307" column="58" lean-forward="true" selection-start-line="307" selection-start-column="58" selection-end-line="307" selection-end-column="58" />
-              <folding>
-                <element signature="e#417#960#0" expanded="false" />
-                <element signature="e#1076#1282#0" expanded="false" />
-                <element signature="e#1325#2085#0" expanded="false" />
-                <element signature="e#2155#2686#0" expanded="false" />
-                <element signature="e#2732#3416#0" expanded="false" />
-                <element signature="e#3489#3888#0" expanded="false" />
-                <element signature="e#3915#7049#0" expanded="false" />
-                <element signature="e#7077#8664#0" expanded="false" />
-                <element signature="e#8695#9158#0" expanded="false" />
-                <element signature="e#9703#10104#0" expanded="false" />
-                <element signature="e#10154#10695#0" expanded="false" />
-                <element signature="e#10728#11911#0" expanded="false" />
-                <element signature="e#11962#12649#0" expanded="false" />
-                <element signature="e#12690#13000#0" expanded="false" />
-                <element signature="e#13056#13361#0" expanded="false" />
-                <element signature="e#13421#14378#0" expanded="false" />
-                <element signature="e#15268#15883#0" expanded="false" />
-                <element signature="e#15963#16575#0" expanded="false" />
-                <element signature="e#17587#17931#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JavaScript_test.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/JavaScript_test.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="319" column="48" lean-forward="false" selection-start-line="319" selection-start-column="48" selection-end-line="319" selection-end-column="48" />
-              <folding>
-                <element signature="e#13#7820#0" expanded="false" />
-                <element signature="e#55#1081#0" expanded="false" />
-                <element signature="e#1130#2198#0" expanded="false" />
-                <element signature="e#2235#3325#0" expanded="false" />
-                <element signature="e#3369#4453#0" expanded="false" />
-                <element signature="e#4497#5584#0" expanded="false" />
-                <element signature="e#5622#6608#0" expanded="false" />
-                <element signature="e#6662#7816#0" expanded="false" />
-                <element signature="e#7836#10469#0" expanded="false" />
-                <element signature="e#7877#9149#0" expanded="false" />
-                <element signature="e#9190#10464#0" expanded="false" />
-                <element signature="e#10536#11794#0" expanded="false" />
-                <element signature="e#11837#13102#0" expanded="false" />
-                <element signature="e#13128#15393#0" expanded="false" />
-                <element signature="e#15409#17304#0" expanded="false" />
-                <element signature="e#15446#16295#0" expanded="false" />
-                <element signature="e#16368#17301#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -143,7 +84,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="myconfig.cfg" pinned="false" current-in-tab="true">
+      <file leaf-file-name="myconfig.cfg" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/myconfig.cfg">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="193">
@@ -272,9 +213,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="244" />
-    <option name="y" value="-20" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="620" />
+    <option name="y" value="78" />
     <option name="width" value="697" />
     <option name="height" value="626" />
   </component>
@@ -394,7 +335,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="620" y="78" width="697" height="626" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -402,8 +343,8 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.49394855" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38398692" sideWeight="0.4969743" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25037822" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4757085" sideWeight="0.4969743" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5196232" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -859,37 +800,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Machine_learning.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="146" column="52" lean-forward="true" selection-start-line="146" selection-start-column="52" selection-end-line="146" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#58#0" expanded="true" />
-            <element signature="e#2048#5222#0" expanded="false" />
-            <element signature="e#5303#5515#0" expanded="false" />
-            <element signature="e#5588#5777#0" expanded="false" />
-            <element signature="e#5884#6097#0" expanded="false" />
-            <element signature="e#6198#6458#0" expanded="false" />
-            <element signature="e#6565#6799#0" expanded="false" />
-            <element signature="e#6888#7142#0" expanded="false" />
-            <element signature="e#8069#8231#0" expanded="false" />
-            <element signature="e#8303#8463#0" expanded="false" />
-            <element signature="e#8587#9128#0" expanded="false" />
-            <element signature="e#9214#9541#0" expanded="false" />
-            <element signature="e#9618#10186#0" expanded="false" />
-            <element signature="e#10291#10815#0" expanded="false" />
-            <element signature="e#10980#11588#0" expanded="false" />
-            <element signature="e#11703#12166#0" expanded="false" />
-            <element signature="e#12229#12845#0" expanded="false" />
-            <element signature="e#12913#13248#0" expanded="false" />
-            <element signature="e#13422#14227#0" expanded="false" />
-            <element signature="e#14321#14678#0" expanded="false" />
-            <element signature="e#14822#15467#0" expanded="false" />
-            <element signature="e#15557#15659#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Dashbord.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
@@ -935,6 +845,37 @@
         <state relative-caret-position="193">
           <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Machine_learning.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="343" column="13" lean-forward="true" selection-start-line="343" selection-start-column="13" selection-end-line="343" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#58#0" expanded="true" />
+            <element signature="e#2048#5222#0" expanded="false" />
+            <element signature="e#5303#5515#0" expanded="false" />
+            <element signature="e#5588#5777#0" expanded="false" />
+            <element signature="e#5884#6097#0" expanded="false" />
+            <element signature="e#6198#6458#0" expanded="false" />
+            <element signature="e#6565#6799#0" expanded="false" />
+            <element signature="e#6888#7142#0" expanded="false" />
+            <element signature="e#8069#8231#0" expanded="false" />
+            <element signature="e#8303#8463#0" expanded="false" />
+            <element signature="e#8587#9128#0" expanded="false" />
+            <element signature="e#9214#9541#0" expanded="false" />
+            <element signature="e#9618#10186#0" expanded="false" />
+            <element signature="e#10291#10815#0" expanded="false" />
+            <element signature="e#10980#11588#0" expanded="false" />
+            <element signature="e#11703#12166#0" expanded="false" />
+            <element signature="e#12229#12845#0" expanded="false" />
+            <element signature="e#12913#13248#0" expanded="false" />
+            <element signature="e#13422#14227#0" expanded="false" />
+            <element signature="e#14321#14678#0" expanded="false" />
+            <element signature="e#14822#15467#0" expanded="false" />
+            <element signature="e#15557#15659#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
