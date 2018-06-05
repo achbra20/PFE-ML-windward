@@ -403,21 +403,56 @@
 
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <i class="fa fa-bar-chart-o fa-fw"></i>  Chart Boat
+                            <i class="fa fa-bar-chart-o fa-fw"></i>  Chart County All Destination
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
                             <div class="form-group">
-                                            <label>Boat</label>
-                                            <select id="boats"  class="form-control">
-                                               {% for boat in all_boats %}
-                                                    <option  value="{{ boat.id_gen }}" >{{ boat.name }}</option>
-                                               {% endfor %}
-                                            </select>
+                                    <label >Country</label>
+                                    <select id="country_alldestination"  class="form-control">
+                                       {% for country in countrys %}
+                                             <option  value="{{ country.0 }}" >{{ country.1 }}</option>
+                                       {% endfor %}
+                                   </select>
                             </div>
-                            <div id ="morris-bar-chart-boat"></div>
-                            <div class="text-center" id ="landing_boat" ><img  src="../static/image/Blocks-150px.svg"  height="150px" alt="Loading" /></div>
-                          </div>
+                        </div>
+                        <div class="panel-footer">
+                            <div class="text-center" id ="landing_country_alldestination" ><img  src="../static/image/Blocks-150px.svg"  height="150px" alt="Loading" /></div>
+                            <div id ="morris-bar-chart-country_alldestination"></div>
+                         </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-bar-chart-o fa-fw"></i>  Chart County Destination
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <div class="col-lg-6">
+                                    <label >Country</label>
+                                    <select id="country_destination"  class="form-control">
+                                       {% for country in countrys %}
+                                             <option  value="{{ country.0 }}" >{{ country.1 }}</option>
+                                       {% endfor %}
+                                   </select>
+                                </div>
+                                <div class="col-lg-6">
+                                    <label >Destination</label>
+                                    <select id="des_country"  class="form-control">
+                                        {% for des in all_des_boats  %}
+                                            <option  value="{{ des.id }}" >{{ des.location_name }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-footer">
+                            <div class="text-center" id ="landing_country_destination" ><img  src="../static/image/Blocks-150px.svg"  height="150px" alt="Loading" /></div>
+                            <div id ="morris-bar-chart-country_destination"></div>
+                         </div>
                         <!-- /.panel-body -->
                     </div>
                     <!-- /.panel -->
@@ -457,6 +492,48 @@
 
                     <div class="panel panel-default">
                         <div class="panel-heading">
+                            <i class="fa fa-bar-chart-o fa-fw"></i>  Chart  Destination-boat
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="form-group">
+                                            <label>Destination</label>
+                                            <select id="destination_boats"  class="form-control">
+                                               {% for destination in all_destination %}
+                                                    <option  value="{{ destination.id }}" >{{ destination.destination }}</option>
+                                               {% endfor %}
+                                            </select>
+                            </div>
+                            <div id ="morris-bar-chart_destination_boats"></div>
+                            <div class="text-center" id ="landing_destination_boats" ><img  src="../static/image/Blocks-150px.svg"  height="150px" alt="Loading" /></div>
+                          </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-bar-chart-o fa-fw"></i>  Chart Boat
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="form-group">
+                                            <label>Boat</label>
+                                            <select id="boats"  class="form-control">
+                                               {% for boat in all_boats %}
+                                                    <option  value="{{ boat.id_gen }}" >{{ boat.name }}</option>
+                                               {% endfor %}
+                                            </select>
+                            </div>
+                            <div id ="morris-bar-chart-boat"></div>
+                            <div class="text-center" id ="landing_boat" ><img  src="../static/image/Blocks-150px.svg"  height="150px" alt="Loading" /></div>
+                          </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
                             <i class="fa fa-bar-chart-o fa-fw"></i>  Chart Boat Country
                         </div>
                         <!-- /.panel-heading -->
@@ -474,107 +551,6 @@
                             <div class="text-center" id ="landing_country_boat" ><img  src="../static/image/Blocks-150px.svg"  height="150px" alt="Loading" /></div>
                             <div id ="morris-bar-chart-country_boat"></div>
                          </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
-
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <i class="fa fa-bar-chart-o fa-fw"></i>  Chart County Destination
-                        </div>
-                        <!-- /.panel-heading -->
-                        <div class="panel-body">
-                            <div class="form-group">
-                                <div class="col-lg-6">
-                                    <label >Country</label>
-                                    <select id="country_destination"  class="form-control">
-                                       {% for country in countrys %}
-                                             <option  value="{{ country.0 }}" >{{ country.1 }}</option>
-                                       {% endfor %}
-                                   </select>
-                                </div>
-                                <div class="col-lg-6">
-                                    <label >Destination</label>
-                                    <select id="des_country"  class="form-control">
-                                        {% for des in all_des_boats  %}
-                                            <option  value="{{ des.id }}" >{{ des.location_name }}</option>
-                                        {% endfor %}
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel-footer">
-                            <div class="text-center" id ="landing_country_destination" ><img  src="../static/image/Blocks-150px.svg"  height="150px" alt="Loading" /></div>
-                            <div id ="morris-bar-chart-country_destination"></div>
-                         </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
-
-
-
-
-
-
-
-
-
-
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <i class="fa fa-bar-chart-o fa-fw"></i>  Chart County All Destination
-                        </div>
-                        <!-- /.panel-heading -->
-                        <div class="panel-body">
-                            <div class="form-group">
-                                    <label >Country</label>
-                                    <select id="country_alldestination"  class="form-control">
-                                       {% for country in countrys %}
-                                             <option  value="{{ country.0 }}" >{{ country.1 }}</option>
-                                       {% endfor %}
-                                   </select>
-                            </div>
-                        </div>
-                        <div class="panel-footer">
-                            <div class="text-center" id ="landing_country_alldestination" ><img  src="../static/image/Blocks-150px.svg"  height="150px" alt="Loading" /></div>
-                            <div id ="morris-bar-chart-country_alldestination"></div>
-                         </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <i class="fa fa-bar-chart-o fa-fw"></i>  Chart  Destination-boat
-                        </div>
-                        <!-- /.panel-heading -->
-                        <div class="panel-body">
-                            <div class="form-group">
-                                            <label>Destination</label>
-                                            <select id="destination_boats"  class="form-control">
-                                               {% for destination in all_destination %}
-                                                    <option  value="{{ destination.id }}" >{{ destination.destination }}</option>
-                                               {% endfor %}
-                                            </select>
-                            </div>
-                            <div id ="morris-bar-chart_destination_boats"></div>
-                            <div class="text-center" id ="landing_destination_boats" ><img  src="../static/image/Blocks-150px.svg"  height="150px" alt="Loading" /></div>
-                          </div>
                         <!-- /.panel-body -->
                     </div>
                     <!-- /.panel -->

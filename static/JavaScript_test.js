@@ -331,7 +331,6 @@ $(function() {
             contentType: "application/json; charset=utf-8",
             data: {},
             success: function (result) {
-                 result.score = parseInt(result.score);
                  result.dates = new Date(result.dates);
                  $('#landing_country_destination').hide();
                  Morris.Bar({
@@ -367,7 +366,6 @@ $(function() {
             contentType: "application/json; charset=utf-8",
             data: {},
             success: function (result) {
-                 result.score = parseInt(result.score);
                  result.dates = new Date(result.dates);
                  $('#landing_boat_destination').hide();
                  Morris.Bar({
