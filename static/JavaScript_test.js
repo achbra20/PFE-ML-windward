@@ -113,20 +113,18 @@ $(function() {
          $('#landing_country_boat').show();
          $.ajax({
             type: 'GET',
-            url:   '/boat_country/'+country,
+            url:   '/graphe_boat_country/'+country,
             dataType: 'json',
             async: true,
             contentType: "application/json; charset=utf-8",
             data: {},
             success: function (result) {
-                 result.score = parseInt(result.score);
-                 result.dates = new Date(result.dates);
                  $('#landing_country_boat').hide();
                  Morris.Bar({
                     element: 'morris-bar-chart-country_boat',
                     data: result,
                     xkey: 'name',
-                    ykeys: ['nombre'],
+                    ykeys: ['counts'],
                     labels: ['number'],
                     hideHover: 'auto',
                     resize: true,
@@ -140,6 +138,105 @@ $(function() {
         });
          return data;
     })
+
+    $('#year_request').change(function() {
+         var year = $(this).val();
+         var data = "";
+         $('#morris-bar-chart_year').empty().append();
+         $('#landing_year').show();
+         $.ajax({
+            type: 'GET',
+            url:   '/graphe_year_request/'+year,
+            dataType: 'json',
+            async: true,
+            contentType: "application/json; charset=utf-8",
+            data: {},
+            success: function (result) {
+                 result.month = parseInt(result.month);
+                 $('#landing_year').hide();
+                 Morris.Bar({
+                    element: 'morris-bar-chart_year',
+                    data: result,
+                    xkey: 'month',
+                    ykeys: ['counts'],
+                    labels: ['number'],
+                    hideHover: 'auto',
+                    resize: true,
+                    });
+                 $('#landing_year').hide();
+            },
+            error: function (xhr, status, error) {
+                alert(error);
+                $('#landing_year').hide();
+            }
+        });
+         return data;
+    })
+
+    $('#all_year').click(function(){
+       $('#morris-bar-chart_all_year').empty().append();
+       $('#landing_all_year').show();
+       $.ajax({
+            type: 'GET',
+            url:   '/graphe_allyear_request',
+            dataType: 'json',
+            async: true,
+            contentType: "application/json; charset=utf-8",
+            data: {},
+            success: function (result) {
+                 $('#landing_all_year').hide();
+                 Morris.Bar({
+                    element: 'morris-bar-chart_all_year',
+                    data: result,
+                    xkey: 'year',
+                    ykeys: ['counts'],
+                    labels: ['number'],
+                    hideHover: 'auto',
+                    resize: true,
+                    });
+                 $('#landing_all_year').hide();
+            },
+            error: function (xhr, status, error) {
+                alert(error);
+                $('#landing_all_year').hide();
+            }
+        });
+         return data;
+    })
+
+    $('#country_alldestination').change(function() {
+         var country = $(this).val();
+         var data = "";
+         $('#morris-bar-chart-country_alldestination').empty().append();
+         $('#landing_country_alldestination').show();
+         $.ajax({
+            type: 'GET',
+            url:   '/graphe_alldestination_country/'+country,
+            dataType: 'json',
+            async: true,
+            contentType: "application/json; charset=utf-8",
+            data: {},
+            success: function (result) {
+                 $('#landing_country_alldestination').hide();
+                 Morris.Bar({
+                    element: 'morris-bar-chart-country_alldestination',
+                    data: result,
+                    xkey: 'name',
+                    ykeys: ['counts'],
+                    labels: ['number'],
+                    hideHover: 'auto',
+                    resize: true,
+                    });
+                 $('#landing_country_alldestination').hide();
+            },
+            error: function (xhr, status, error) {
+                alert(error);
+                $('#landing_country_alldestination').hide();
+            }
+        });
+         return data;
+    })
+
 });
 $(function() {
 
@@ -305,6 +402,8 @@ jQuery(function($){
     $('#landing_destination_boats').hide();
     $('#landing_country_boat').hide();
     $('#landing_country_destination').hide();
+    $('#landing_year').hide();
+    $('#landing_all_year').hide();
 
 
     $('#ajax_loading').hide();
@@ -357,7 +456,6 @@ jQuery(function($){
     });
 
 });
-
 $(function() {
     $('#country').change(function(){
          var id = $(this).val();

@@ -105,6 +105,36 @@ class Statestique_all_destination:
         df_destination = pd.merge(df_score, all_destination, on='location_id', how='inner')
         return df_destination.to_dict('records')
 
+    @staticmethod
+    def country_destinaion_statistique(root_model,code_country,id_destination):
+        df_destination   = Etl_data.open_json("data_Ml_destination", root_model)
+        df_destination   = df_destination[df_destination["country"] == code_country]
+        df_destination   = df_destination[df_destination["id"] == id_destination]
+        list_destination = []
+        for index, destination in df_destination.iterrows():
+            list_destination.append({"dates":destination["month"]+"/"+destination["year"],"counts":destination["counts"]})
+        statis = Statestique_all_destination()
+        list_destination = pd.DataFrame(list_destination)
+        if len(list_destination)>0:
+            list_destination = statis.reg_time(list_destination)
+        return list_destination.to_dict('records')
+
+    @staticmethod
+    def country_alldestnation_statistique(root_model,code_country):
+        df_destination = Etl_data.open_json("recommendation_destination", root_model)
+        indexed_country = Etl_data.open_json("indexed_country", root_model)
+        index_c = indexed_country[indexed_country["label"] == code_country.upper()]
+        for index,country in index_c.iterrows():
+            df_destination = df_destination[df_destination["country"] == country['index']]
+        destination = list(df_destination.destination.unique())
+        df_score = []
+        for i in range(0,len(destination)):
+            one_boat = pd.DataFrame(df_destination[df_destination["destination"] == destination[i]])
+            for index,des in one_boat.iterrows():
+                df_score.append({"counts":des["counts"],'name':destination[i]})
+        df_final = pd.DataFrame(df_score)
+        return df_final.to_dict('records')
+
 class Statestique_bosts:
 
     #todo Number of boat bay type rent all year in this month
@@ -291,22 +321,51 @@ class Statestique_bosts:
         for i in range(0,len(boat)):
             one_boat = pd.DataFrame(df_boats[df_boats["name"] == boat[i]])
             for index,bateaux in one_boat.iterrows():
-                df_score.append({"id_gen":boat[i],"nombre":bateaux["counts"],'name':boat[i]})
+                df_score.append({"counts":bateaux["counts"],'name':boat[i]})
         df_final = pd.DataFrame(df_score)
         return df_final.to_dict('records')
 
+
+
+class Date_statistique:
+
     @staticmethod
-    def country_destinaion_statistique(root_model,code_country,id_destination):
+    def number_request_year_statistique(root_model,year):
         df_destination   = Etl_data.open_json("data_Ml_destination", root_model)
-        df_destination   = df_destination[df_destination["country"] == code_country]
-        df_destination   = df_destination[df_destination["id"] == id_destination]
-        list_destination = []
-        for index, destination in df_destination.iterrows():
-            list_destination.append({"dates":destination["month"]+"/"+destination["year"],"counts":destination["counts"]})
-        statis = Statestique_all_destination()
-        list_destination = pd.DataFrame(list_destination)
-        list_destination = statis.reg_time(list_destination)
-        return list_destination.to_dict('records')
+        df_destination   = df_destination[df_destination["year"] == year]
+        one_year = list(df_destination.month.unique())
+        df_final = []
+        for i in range(0,len(one_year)):
+            one_boat = pd.DataFrame(df_destination[df_destination["month"] == one_year[i]])
+            score = 0
+            for index, one_data_frame in one_boat.iterrows():
+                score = score + one_data_frame['counts']
+            df_final.append({'month':int(one_year[i]),'counts':score})
+        return sorted(df_final, key=lambda k: k["month"], reverse=False)
+
+    @staticmethod
+    def number_request_allyear_statistique(root_model):
+        df_destination   = Etl_data.open_json("data_Ml_destination", root_model)
+        one_year = list(df_destination.year.unique())
+        df_final = []
+        for i in range(0,len(one_year)):
+            one_boat = pd.DataFrame(df_destination[df_destination["year"] == one_year[i]])
+            score = 0
+            for index, one_data_frame in one_boat.iterrows():
+                score = score + one_data_frame['counts']
+            df_final.append({'year':one_year[i],'counts':score})
+        return sorted(df_final, key=lambda k: k["year"], reverse=True)
+
+    @staticmethod
+    def found_all_year(root_model):
+        df_destination = Etl_data.open_json("data_Ml_destination", root_model)
+        df_final = []
+        one_year = list(df_destination.year.unique())
+        for i in range(0,len(one_year)):
+            df_final.append({'year': one_year[i]})
+        return sorted(df_final, key=lambda k: k["year"], reverse=False)
+
+
 
 
 

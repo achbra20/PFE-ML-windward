@@ -512,6 +512,52 @@
                     <!-- /.panel -->
 
 
+
+
+
+
+
+
+
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-bar-chart-o fa-fw"></i>  Chart County All Destination
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="form-group">
+                                    <label >Country</label>
+                                    <select id="country_alldestination"  class="form-control">
+                                       {% for country in countrys %}
+                                             <option  value="{{ country.0 }}" >{{ country.1 }}</option>
+                                       {% endfor %}
+                                   </select>
+                            </div>
+                        </div>
+                        <div class="panel-footer">
+                            <div class="text-center" id ="landing_country_alldestination" ><img  src="../static/image/Blocks-150px.svg"  height="150px" alt="Loading" /></div>
+                            <div id ="morris-bar-chart-country_alldestination"></div>
+                         </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <i class="fa fa-bar-chart-o fa-fw"></i>  Chart  Destination-boat
@@ -651,6 +697,40 @@
 
                     <div class="panel panel-default">
                         <div class="panel-heading">
+                            <i class="fa fa-bar-chart-o fa-fw"></i>  Chart Year
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="form-group">
+                                            <label>Year</label>
+                                            <select id="year_request"  class="form-control">
+                                               {% for year in all_year %}
+                                                    <option  value="{{ year.year }}" >{{ year.year }}</option>
+                                               {% endfor %}
+                                            </select>
+                            </div>
+                            <div id ="morris-bar-chart_year"></div>
+                            <div class="text-center" id ="landing_year" ><img  src="../static/image/Blocks-150px.svg"  height="150px" alt="Loading" /></div>
+                          </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                           <a id="all_year"> <i class="fa fa-bar-chart-o fa-fw"></i> Chart All Year</a>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div id ="morris-bar-chart_all_year"></div>
+                            <div class="text-center" id ="landing_all_year" ><img  src="../static/image/Blocks-150px.svg"  height="150px" alt="Loading" /></div>
+                          </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
                             <i class="fa fa-bar-chart-o fa-fw">  </i>Boat type
                         </div>
                         <div class="panel-body">
@@ -712,9 +792,9 @@
     <!-- Morris Charts JavaScript -->
     <script src="../static/vendor/raphael/raphael.min.js"></script>
     <script src="../static/vendor/morrisjs/morris.min.js"></script>
-    <script src="../static/data/morris.data.js"></script>
+
     <!-- Custom Theme JavaScript -->
-    <script src="../static/JavaScript_test.js?v=9"></script>
+    <script src="../static/JavaScript_test.js?v=12"></script>
 
     <!-- DataTables JavaScript -->
     <script src="../static/vendor/datatables/js/jquery.dataTables.min.js"></script>

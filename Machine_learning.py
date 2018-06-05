@@ -7,7 +7,7 @@ import datetime
 from Ml_destination        import Creation_Model,Predection_distination ,Training_model_destination,Creation_Model_recommendation ,Recommendation_distnation
 from ML_boats              import Create_Data_Recommendation_Boats,Recommendation_boats,ML_boat_data,Prediction,Training_boat
 from  ML_boats_destination import Create_data_Ml_boat_destination,Ml_boat_destination,Recommendation_boats_destenation
-from Dashbord              import Statestique_all_destination,Statestique_bosts
+from Dashbord              import Statestique_all_destination,Statestique_bosts,Date_statistique
 
 
 app = Flask(__name__)
@@ -88,7 +88,9 @@ def index():
         creation_model_boat_des    = datetime.datetime.fromtimestamp(os.path.getmtime(root_model + "/" + model_ml_boat_des))
         creation_model_boat        = datetime.datetime.fromtimestamp(os.path.getmtime(root_model + "/" + model_ml_boat))
 
-        return render_template('index.html',creation_model_boat= creation_model_boat ,creation_data_boat =creation_data_boat,all_destination_score= all_destination_score,boats_score=boats_score,all_des_boats = all_des_boats,all_boats_des =all_boats_des,date_model_boat_des= creation_model_boat_des,all_boats =all_boats ,date_creation_boast_des= creation_data_boat_des,creation_rec_boats =creation_rec_boats,countrys = countrys,creation_data_destination=creation_data_destination,creation_rec_destination=creation_rec_destination,date_model_destination = creation_model_destination,all_destination = all_destination, error_ml = error_train,score = score_test ,date = datetime.datetime.now().strftime('%d/%m/%Y'))
+        all_year = Date_statistique.found_all_year(root_model)
+
+        return render_template('index.html',all_year=all_year,creation_model_boat= creation_model_boat ,creation_data_boat =creation_data_boat,all_destination_score= all_destination_score,boats_score=boats_score,all_des_boats = all_des_boats,all_boats_des =all_boats_des,date_model_boat_des= creation_model_boat_des,all_boats =all_boats ,date_creation_boast_des= creation_data_boat_des,creation_rec_boats =creation_rec_boats,countrys = countrys,creation_data_destination=creation_data_destination,creation_rec_destination=creation_rec_destination,date_model_destination = creation_model_destination,all_destination = all_destination, error_ml = error_train,score = score_test ,date = datetime.datetime.now().strftime('%d/%m/%Y'))
 
 @app.route('/graphe/<country>', methods=['GET'])
 def build_graph(country):
@@ -139,7 +141,7 @@ def build_graphe_country_boat(country):
     botas = statistique.statestique_type_boat(api_ww,api_crm,country)
     return jsonify(botas)
 
-@app.route('/boat_country/<country>')
+@app.route('/graphe_boat_country/<country>')
 def build_graphe_country_boat_name(country):
     path        = app.config['ROOT_MODEL']
     botas       = Statestique_bosts.country_boat_statistique(path,country)
@@ -148,8 +150,26 @@ def build_graphe_country_boat_name(country):
 @app.route('/graphe_destination_country/<country>/<destination>')
 def build_graphe_country_destination_name(country,destination):
     path        = app.config['ROOT_MODEL']
-    list_destination       = Statestique_bosts.country_destinaion_statistique(path,country,destination)
+    list_destination       = Statestique_all_destination.country_destinaion_statistique(path,country,destination)
     return jsonify(list_destination)
+
+@app.route('/graphe_alldestination_country/<country>')
+def build_graphe_country_alldestination(country):
+    path             = app.config['ROOT_MODEL']
+    list_destination = Statestique_all_destination.country_alldestnation_statistique(path,country)
+    return jsonify(list_destination)
+
+@app.route('/graphe_year_request/<year>')
+def build_graphe_year(year):
+    path        = app.config['ROOT_MODEL']
+    list_nb_request       = Date_statistique.number_request_year_statistique(path,year)
+    return jsonify(list_nb_request)
+
+@app.route('/graphe_allyear_request')
+def build_graphe_allyear():
+    path        = app.config['ROOT_MODEL']
+    list_nb_request       = Date_statistique.number_request_allyear_statistique(path)
+    return jsonify(list_nb_request)
 
 #################### Recommendation destination#######################
 
